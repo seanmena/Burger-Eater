@@ -1,0 +1,21 @@
+.left-burger-window {
+  border: black solid 5px;
+}
+
+.live-burger {
+  border: solid red 2px;
+}
+
+.dead-burger {
+  margin-top: 10%;
+  border: solid blue;
+}
+
+.add-burger {
+  border: solid black;
+}
+
+.button {
+  background-color: black;
+  color: white;
+}

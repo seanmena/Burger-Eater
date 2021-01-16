@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row p-5 m-2  burger-window">
+        <div class="col-8 p-3 live-burger">
+            <h2 class="h2">Burgers</h2>
+
+            <ul class="row">
+                {{!-- all burger UNLESS devoured add burger names --}}
+                {{#each burgers}}
+                {{#unless devoured}}
+
+                <li class="col-9">
+                    {{burger_name}}
+                </li>
+
+                <button id="devour-btn" class="btn1 btn eat-burger m-1" data-id="{{id}}"
+                    data-burger="{{devoured}}">Devour!</button>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+
+        <div class="col-8 p-3 dead-burger">
+            <h2 class="h2">Eaten Burgers</h2>
+
+            <ul>
+                {{!-- all burgers IF (they are) devoured add burger names--}}
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="container add-burger">
+    <div class="row text-center d-flex justify-content-center">
+        <div class="col-4 p-3">
+
+            <h2 class="h2">Add a Burger</h2>
+            <form class="add-burger">
+
+                <div class="form-group p-2">
+                    <input for="new-burger" type="text" id="new-burger" name="name" class="form-control"
+                        placeholder="Burger Name" aria-label="Add">
+                </div>
+
+                <button id="submit-btn" class="btn button" type="submit">Submit Burger!</button>
+            </form>
+        </div>
+    </div>
+</div>
